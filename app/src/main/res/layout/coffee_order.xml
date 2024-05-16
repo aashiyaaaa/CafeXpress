@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="405dp"
+        android:layout_height="276dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_column="2"
+            app:layout_row="0">
+
+            <Button
+                android:id="@+id/btnAddCoffee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_coffee"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/btnRemoveCoffee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remove_coffee"
+                app:layout_column="0"
+                app:layout_row="1" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="0">
+
+            <TextView
+                android:id="@+id/textViewCoffeeAddIns"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/add_ins_0_30_each" />
+
+            <CheckBox
+                android:id="@+id/cbSweetCream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sweet_cream" />
+
+            <CheckBox
+                android:id="@+id/cbFrenchVanilla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/french_vanilla" />
+
+            <CheckBox
+                android:id="@+id/cbIrishCream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/irish_cream" />
+
+            <CheckBox
+                android:id="@+id/cbCaramel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/caramel" />
+
+            <CheckBox
+                android:id="@+id/cbMocha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mocha" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/coffeeSpinner"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="410dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewCoffeeOrders">
+
+        <TextView
+            android:id="@+id/textViewTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_cost"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/txtSubTotalCoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/name"
+            app:layout_column="1"
+            app:layout_row="0" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ListView
+        android:id="@+id/listViewCoffeeOrders"
+        android:layout_width="413dp"
+        android:layout_height="189dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout3" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout3"
+        android:layout_width="404dp"
+        android:layout_height="47dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout">
+
+        <TextView
+            android:id="@+id/textViewQuantity"
+            android:layout_width="88dp"
+            android:layout_height="32dp"
+            android:text="@string/quantity"
+            app:layout_column="1"
+            app:layout_row="0"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="276dp" />
+
+        <EditText
+            android:id="@+id/txtMultipleCoffee"
+            android:layout_width="96dp"
+            android:layout_height="38dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_column="2"
+            app:layout_row="0"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="274dp" />
+
+        <Button
+            android:id="@+id/btnDecreaseCoffee"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dash"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/btnIncreaseCoffee"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"
+            app:layout_column="3"
+            app:layout_row="0" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="381dp"
+        android:layout_height="47dp"
+        android:text="@string/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

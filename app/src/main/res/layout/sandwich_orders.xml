@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="408dp"
+        android:layout_height="650dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="389dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/home"
+            app:layout_column="0"
+            app:layout_row="5" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="396dp"
+            android:layout_height="269dp"
+            app:layout_column="0"
+            app:layout_row="0">
+
+            <RadioGroup
+                android:layout_width="190dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bread" />
+
+                <RadioButton
+                    android:id="@+id/rbBagel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bagel" />
+
+                <RadioButton
+                    android:id="@+id/rbWheatBread"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wheat_bread" />
+
+                <RadioButton
+                    android:id="@+id/rbSourDough"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sour_dough" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="190dp"
+                android:layout_height="127dp"
+                app:layout_column="0"
+                app:layout_row="1">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/meat" />
+
+                <RadioButton
+                    android:id="@+id/rbBeef"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beef" />
+
+                <RadioButton
+                    android:id="@+id/rbChicken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chicken" />
+
+                <RadioButton
+                    android:id="@+id/rbFish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fish" />
+
+            </RadioGroup>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                app:layout_column="1"
+                app:layout_row="0">
+
+                <CheckBox
+                    android:id="@+id/cbCheese"
+                    android:layout_width="139dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cheese"
+                    app:layout_column="0"
+                    app:layout_row="4" />
+
+                <CheckBox
+                    android:id="@+id/cbOnions"
+                    android:layout_width="139dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onions"
+                    app:layout_column="0"
+                    app:layout_row="3" />
+
+                <CheckBox
+                    android:id="@+id/cbLettuce"
+                    android:layout_width="139dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lettuce"
+                    app:layout_column="0"
+                    app:layout_row="1" />
+
+                <CheckBox
+                    android:id="@+id/cbTomatoes"
+                    android:layout_width="142dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tomatoes"
+                    app:layout_column="0"
+                    app:layout_row="2" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_ons"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_column="0"
+            app:layout_row="1">
+
+            <Button
+                android:id="@+id/btnAddSandwich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/add_sandwich" />
+
+            <Button
+                android:id="@+id/btnRemoveSandwich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/remove_item"
+                app:layout_column="2"
+                app:layout_row="0" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_column="0"
+            app:layout_row="2">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/quantity"
+                app:layout_column="1"
+                app:layout_row="0" />
+
+            <EditText
+                android:id="@+id/txtMultipleSandwich"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/btnDecreaseSandwich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minus"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/btnIncreaseSandwich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus"
+                app:layout_column="3"
+                app:layout_row="0" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <ListView
+            android:id="@+id/listViewSandwichOrders"
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_column="0"
+            app:layout_row="4">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cost"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <EditText
+                android:id="@+id/txtSubTotalSandwich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@string/name"
+                app:layout_column="1"
+                app:layout_row="0" />
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
